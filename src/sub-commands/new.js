@@ -26,7 +26,7 @@ class New extends SubCommand {
   run(cliArgs) {
     this.confirmGit();
     this.createDirTask.run(cliArgs).then(() => {
-      var fetch_url = 'https://github.com/joyvuu-dave/react-redux-starter-kit.git';
+      var fetch_url = 'https://github.com/joyvuu-dave/react-redux-starter-kit/tree/dave';
       this.gitPullTask.run(fetch_url).then(() => {
         this.createProjectSettings();
         this.resetGitHistory();
